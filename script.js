@@ -1,8 +1,7 @@
 /**
- * Catppuccin Mocha Portfolio - Interactive Experience
+ * Oceanic Teal Portfolio - Interactive Experience
  * Aditya Panigrahi (Aditya060406)
- * Features: Spotlight mouse-follow, Interactive Terminal, Cozy Desk Widget,
- * Web Audio Lofi Synth, Sparkles, Filterable Arsenal & Toast Notifications.
+ * Palette: #031716, #032F30, #0A7075, #0C969C, #6BA3BE, #274D60
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typewriterElement = document.getElementById('typewriter');
   const roles = [
     'scalable full-stack web applications. 🚀',
-    'the CozyDesk desktop productivity suite. 🛋️✨',
+    'the CozyDesk desktop productivity suite. 🛋️🌊',
     'multimodal AI & OCR solutions (SIH). 🏆',
     'high-performance algorithms in C/C++. ⚡',
-    'clean code fueled by coffee & lofi beats. ☕💜'
+    'clean code fueled by coffee & oceanic vibes. ☕🩵'
   ];
 
   let roleIndex = 0;
@@ -99,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Spotlight Mouse-Tracking Effect (Apple / Linear style)
+  // 4. Spotlight Mouse-Tracking Effect
   const spotlightCards = document.querySelectorAll('.spotlight-card, .code-terminal-card');
   spotlightCards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
@@ -120,13 +119,12 @@ document.addEventListener('DOMContentLoaded', () => {
   <span class="syn-prop">name</span>: <span class="syn-string">"Aditya Panigrahi"</span>,
   <span class="syn-prop">handle</span>: <span class="syn-string">"Aditya060406"</span>,
   <span class="syn-prop">role</span>: <span class="syn-string">"Full-Stack Developer & CS Undergrad"</span>,
-  <span class="syn-prop">superpowers</span>: [
-    <span class="syn-string">"TypeScript & React"</span>,
-    <span class="syn-string">"Node.js & Microservices"</span>,
-    <span class="syn-string">"C/C++ Problem Solving"</span>,
-    <span class="syn-string">"PostgreSQL & Redis"</span>
+  <span class="syn-prop">palette</span>: [
+    <span class="syn-string">"#031716"</span>, <span class="syn-string">"#032F30"</span>,
+    <span class="syn-string">"#0A7075"</span>, <span class="syn-string">"#0C969C"</span>,
+    <span class="syn-string">"#6BA3BE"</span>, <span class="syn-string">"#274D60"</span>
   ],
-  <span class="syn-prop">currentVibe</span>: <span class="syn-string">"Crafting CozyDesk with coffee ☕💜"</span>,
+  <span class="syn-prop">currentVibe</span>: <span class="syn-string">"Crafting CozyDesk in Oceanic Teal 🌊✨"</span>,
   <span class="syn-prop">status</span>: <span class="syn-keyword">function</span>() {
     <span class="syn-keyword">return</span> <span class="syn-string">"Ready to build high-impact software!"</span>;
   }
@@ -134,12 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
     cozydesk: `<span class="syn-keyword">{</span>
   <span class="syn-prop">"appName"</span>: <span class="syn-string">"CozyDesk"</span>,
   <span class="syn-prop">"version"</span>: <span class="syn-string">"1.0.0-beta"</span>,
-  <span class="syn-prop">"philosophy"</span>: <span class="syn-string">"Serenity meets peak productivity 🛋️✨"</span>,
+  <span class="syn-prop">"philosophy"</span>: <span class="syn-string">"Serenity meets peak productivity 🛋️🌊"</span>,
   <span class="syn-prop">"features"</span>: [
     <span class="syn-string">"Modular Desktop Widgets"</span>,
-    <span class="syn-string">"Ambient Lofi Audio Themes"</span>,
+    <span class="syn-string">"Ambient Ocean & Lofi Audio Themes"</span>,
     <span class="syn-string">"Pomodoro & Flow State Timers"</span>,
-    <span class="syn-string">"Catppuccin Palette Engine"</span>
+    <span class="syn-string">"Oceanic Teal Aesthetic Palette"</span>
   ],
   <span class="syn-prop">"openSource"</span>: <span class="syn-type">true</span>,
   <span class="syn-prop">"repository"</span>: <span class="syn-string">"github.com/Aditya060406/CozyDesk"</span>
@@ -149,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <span class="syn-string">1. Code is written for humans first, computers second.</span>
 <span class="syn-string">2. Performance and beauty are not mutually exclusive.</span>
 <span class="syn-string">3. Master the fundamentals: Data Structures, Memory, I/O.</span>
-<span class="syn-string">4. Build tools that bring genuine calmness and joy. 🌸</span>
+<span class="syn-string">4. Build tools that bring genuine calmness, clarity, and joy. 🌊</span>
 
 <span class="syn-entity">// Always learning, always building.</span>`
   };
@@ -207,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. Cozy Corner: Web Audio Generative Lofi Ambience (Pure Web Audio!)
+  // 8. Cozy Corner: Web Audio Generative Ocean Lofi Drone
   let audioCtx = null;
   let isPlayingLofi = false;
   let oscillators = [];
@@ -232,10 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
       audioCtx = new AudioContext();
 
       masterGain = audioCtx.createGain();
-      masterGain.gain.setValueAtTime(0.06, audioCtx.currentTime); // Soft soothing volume
+      masterGain.gain.setValueAtTime(0.06, audioCtx.currentTime);
 
-      // Soft Catppuccin Major-7th chord (C#m9 / Emaj7 lofi vibe frequencies)
-      const freqs = [138.59, 164.81, 207.65, 246.94, 277.18]; // C#3, E3, G#3, B3, C#4
+      // Cmaj9 harmonic ocean chord: C3, E3, G3, B3, D4
+      const freqs = [130.81, 164.81, 196.00, 246.94, 293.66];
 
       oscillators = freqs.map((freq, i) => {
         const osc = audioCtx.createOscillator();
@@ -245,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
         osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
 
         filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(450, audioCtx.currentTime);
+        filter.frequency.setValueAtTime(420, audioCtx.currentTime);
 
         osc.connect(filter);
         filter.connect(masterGain);
@@ -255,11 +253,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       masterGain.connect(audioCtx.destination);
       isPlayingLofi = true;
-      if (lofiStatus) lofiStatus.textContent = '🎵 Cozy Lofi Ambience Playing';
+      if (lofiStatus) lofiStatus.textContent = '🎵 Oceanic Chill Drone Playing';
       if (toggleLofiBtn) toggleLofiBtn.textContent = 'Pause Ambience ⏸️';
-      showToast('🎵 Ambient lofi vibe active. Enjoy the cozy atmosphere!');
+      showToast('🌊 Oceanic ambient drone active. Enjoy the calm vibe!');
     } catch (e) {
-      console.warn('AudioContext not allowed yet:', e);
+      console.warn('AudioContext error:', e);
     }
   }
 
@@ -284,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function spawnSparkles(e) {
     const originX = e ? e.clientX : window.innerWidth / 2;
     const originY = e ? e.clientY : window.innerHeight / 2;
-    const sparkleEmojis = ['✨', '🌸', '✦', '✧', '💜', '☕', '⋆'];
+    const sparkleEmojis = ['✨', '🌊', '✦', '✧', '🩵', '☕', '⋆'];
 
     for (let i = 0; i < 18; i++) {
       const particle = document.createElement('span');
@@ -312,14 +310,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sparkleBtn) {
     sparkleBtn.addEventListener('click', (e) => {
       spawnSparkles(e);
-      showToast('✨ Magic Catppuccin sparkles sprinkled!');
+      showToast('✨ Oceanic teal sparkles sprinkled!');
     });
   }
 
   if (showerSparklesBtn) {
     showerSparklesBtn.addEventListener('click', (e) => {
       spawnSparkles(e);
-      showToast('🌸 Pastel sparkles shower! Have a wonderful day!');
+      showToast('🌊 Serene sparkles shower! Have a peaceful day!');
     });
   }
 
