@@ -99,16 +99,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 4. Spotlight Mouse-Tracking Effect
-  const spotlightCards = document.querySelectorAll('.spotlight-card, .code-terminal-card');
-  spotlightCards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      card.style.setProperty('--mouse-x', `${x}px`);
-      card.style.setProperty('--mouse-y', `${y}px`);
+  function bindSpotlights() {
+    const spotlightCards = document.querySelectorAll('.spotlight-card, .code-terminal-card, .repo-card');
+    spotlightCards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
     });
-  });
+  }
+  bindSpotlights();
 
   // 5. Interactive Terminal Tab Switcher
   const termTabs = document.querySelectorAll('.term-tab');
@@ -196,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Cozy Corner: Virtual Coffee Counter
+  // 7. Zen Lounge: Virtual Coffee Counter
   let coffeeCount = 3;
   const coffeeCountEl = document.getElementById('coffeeCount');
   const sipCoffeeBtn = document.getElementById('sipCoffeeBtn');
@@ -216,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. Cozy Corner: Web Audio Generative Ocean Lofi Drone
+  // 8. Zen Lounge: Web Audio Generative Ocean Lofi Drone
   let audioCtx = null;
   let isPlayingLofi = false;
   let oscillators = [];
@@ -391,4 +394,158 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // 14. Dynamic GitHub Repositories Fetcher
+  const githubReposGrid = document.getElementById('githubReposGrid');
+
+  const languageColors = {
+    JavaScript: '#F1E05A',
+    TypeScript: '#3178C6',
+    Python: '#3572A5',
+    'C++': '#F34B7D',
+    C: '#555555',
+    HTML: '#E34C26',
+    CSS: '#563D7C',
+    Swift: '#F05138',
+    Java: '#B07219',
+    Shell: '#89E051'
+  };
+
+  async function fetchGitHubRepos() {
+    if (!githubReposGrid) return;
+
+    try {
+      const response = await fetch('https://api.github.com/users/Aditya060406/repos?sort=pushed&per_page=12');
+      if (!response.ok) {
+        throw new Error(`GitHub API returned status ${response.status}`);
+      }
+
+      const repos = await response.json();
+      // Filter out the profile readme repo itself
+      const activeRepos = repos
+        .filter(r => r.name.toLowerCase() !== 'aditya060406' && !r.fork)
+        .slice(0, 6);
+
+      if (activeRepos.length === 0) {
+        throw new Error('No public repos found');
+      }
+
+      githubReposGrid.innerHTML = '';
+      activeRepos.forEach(repo => {
+        const lang = repo.language || 'Software';
+        const langColor = languageColors[lang] || '#0C969C';
+        const desc = repo.description || 'Full-stack software engineering project and public repository.';
+        const stars = repo.stargazers_count || 0;
+        const forks = repo.forks_count || 0;
+
+        const card = document.createElement('article');
+        card.className = 'repo-card spotlight-card';
+        card.innerHTML = `
+          <div class="repo-header">
+            <div class="repo-folder-icon">
+              <i class="fa-regular fa-folder-open"></i>
+            </div>
+            <div class="repo-badge active-badge">
+              <span class="repo-pulse-dot"></span> Active Repo
+            </div>
+          </div>
+          <h3 class="repo-title">
+            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>
+          </h3>
+          <p class="repo-desc">${escapeHTML(desc)}</p>
+          <div class="repo-footer">
+            <div class="repo-meta">
+              <span class="repo-lang">
+                <span class="repo-lang-dot" style="background-color: ${langColor};"></span> ${lang}
+              </span>
+              <span class="repo-stat" title="Stars"><i class="fa-regular fa-star"></i> ${stars}</span>
+              <span class="repo-stat" title="Forks"><i class="fa-solid fa-code-fork"></i> ${forks}</span>
+            </div>
+            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="repo-link-btn" title="View Code on GitHub">
+              <i class="fa-brands fa-github"></i> View
+            </a>
+          </div>
+        `;
+        githubReposGrid.appendChild(card);
+      });
+
+      bindSpotlights();
+    } catch (err) {
+      console.warn('Using fallback repository cards:', err);
+      renderFallbackRepos();
+    }
+  }
+
+  function renderFallbackRepos() {
+    if (!githubReposGrid) return;
+    const fallbackData = [
+      {
+        name: 'event-management-frontend',
+        desc: 'Full-stack event management and registration web application featuring responsive interfaces and modern state architecture.',
+        lang: 'JavaScript',
+        url: 'https://github.com/Aditya060406/event-management-frontend'
+      },
+      {
+        name: 'CozyDesk',
+        desc: 'Modular desktop workspace organizer and productivity command center with customizable ambient soundscapes.',
+        lang: 'Swift',
+        url: 'https://github.com/Aditya060406/CozyDesk'
+      },
+      {
+        name: 'Trip_Sync',
+        desc: 'AI-assisted collaborative travel planner system with intelligent routing, schedule management, and itineraries.',
+        lang: 'TypeScript',
+        url: 'https://github.com/Aditya060406/Trip_Sync'
+      },
+      {
+        name: 'KAPS_MedTech',
+        desc: 'Campus health centre appointment booking and medical records management system with role-based security.',
+        lang: 'Full-Stack',
+        url: 'https://github.com/Aditya060406/KAPS_MedTech'
+      }
+    ];
+
+    githubReposGrid.innerHTML = '';
+    fallbackData.forEach(repo => {
+      const card = document.createElement('article');
+      card.className = 'repo-card spotlight-card';
+      const langColor = languageColors[repo.lang] || '#0C969C';
+      card.innerHTML = `
+        <div class="repo-header">
+          <div class="repo-folder-icon">
+            <i class="fa-regular fa-folder-open"></i>
+          </div>
+          <div class="repo-badge active-badge">
+            <span class="repo-pulse-dot"></span> Active Repo
+          </div>
+        </div>
+        <h3 class="repo-title">
+          <a href="${repo.url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>
+        </h3>
+        <p class="repo-desc">${repo.desc}</p>
+        <div class="repo-footer">
+          <div class="repo-meta">
+            <span class="repo-lang">
+              <span class="repo-lang-dot" style="background-color: ${langColor};"></span> ${repo.lang}
+            </span>
+            <span class="repo-stat"><i class="fa-regular fa-star"></i> 0</span>
+          </div>
+          <a href="${repo.url}" target="_blank" rel="noopener noreferrer" class="repo-link-btn">
+            <i class="fa-brands fa-github"></i> View
+          </a>
+        </div>
+      `;
+      githubReposGrid.appendChild(card);
+    });
+
+    bindSpotlights();
+  }
+
+  function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, 
+      tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+    );
+  }
+
+  fetchGitHubRepos();
 });

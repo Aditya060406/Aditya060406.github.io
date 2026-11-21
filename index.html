@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aditya Panigrahi ✨ | Full-Stack Developer & CS Undergrad</title>
-  <meta name="description" content="Portfolio of Aditya Panigrahi (Aditya060406) - Full-Stack Developer, Computer Science Undergraduate, and creator of CozyDesk. Styled with an Oceanic Teal aesthetic.">
+  <meta name="description" content="Portfolio of Aditya Panigrahi (Aditya060406) - Full-Stack Developer & Computer Science Undergraduate. Architecting scalable web systems, modern APIs, and algorithmic solutions in C++.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
   <div class="ambient-glow glow-2"></div>
   <div class="ambient-glow glow-3"></div>
 
-  <!-- Floating Cute Background Stars -->
+  <!-- Floating Cute Background Stars & Particles -->
   <div class="floating-stars" aria-hidden="true">
     <span class="star s1">✦</span>
     <span class="star s2">✧</span>
@@ -42,7 +42,7 @@
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#arsenal" class="nav-link">Arsenal</a>
-        <a href="#cozy-corner" class="nav-link">Cozy Corner 🛋️</a>
+        <a href="#zen-lounge" class="nav-link">Zen Lounge ☕</a>
         <a href="#contact" class="nav-link">Contact</a>
         <div class="nav-social-icons">
           <a href="https://github.com/Aditya060406" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon-btn" title="GitHub">
@@ -95,7 +95,7 @@
           </div>
 
           <p class="hero-description">
-            Computer Science undergraduate crafting scalable full-stack architectures, high-performance systems, and delightful developer tools. Driven by curiosity, algorithmic thinking in C/C++, and elegant oceanic design.
+            Computer Science undergraduate crafting scalable full-stack architectures, high-performance web systems, and delightful digital experiences. Driven by curiosity, algorithmic thinking in C/C++, and elegant oceanic design.
           </p>
 
           <div class="hero-ctas">
@@ -208,7 +208,7 @@
               I am a Computer Science undergraduate focused on crafting scalable, reliable, and aesthetically delightful digital products. My journey spans the full engineering spectrum — from low-level systems programming and Data Structures in C and C++, to rich, reactive web architectures using React, Node.js, and TypeScript.
             </p>
             <p>
-              I believe great software should not only be robust under the hood, but also bring genuine clarity and joy to the people using it. I continuously architect, build, and deploy end-to-end applications, regularly experimenting with modern frameworks and releasing new software.
+              I believe great software should not only be robust under the hood, but also bring genuine clarity and joy to the people using it. As an active builder, I continuously engineer and ship software, experimenting with modern architectures and pushing code regularly.
             </p>
 
             <div class="about-pills">
@@ -247,119 +247,48 @@
 
     <div class="section-glow-separator"></div>
 
-    <!-- Featured Projects Section -->
+    <!-- Shipped Software & Repositories Section (Dynamic GitHub Sync) -->
     <section class="section projects-section" id="projects">
       <div class="section-container">
         <div class="section-header reveal">
-          <span class="section-tag">🚀 Featured Creations</span>
-          <h2 class="section-title">Projects Engineered with Passion</h2>
-          <p class="section-subtitle">Real-world applications solving real challenges with clean design.</p>
+          <span class="section-tag">🚀 Shipped Software & Open Source</span>
+          <h2 class="section-title">Active Projects & Repositories</h2>
+          <p class="section-subtitle">Real-time public repositories synced directly from my GitHub, updated with every commit.</p>
         </div>
 
-        <div class="projects-grid">
-          <!-- Project 1: CozyDesk -->
-          <article class="project-card spotlight-card reveal">
-            <div class="project-card-banner">
-              <div class="project-badge badge-flagship"><i class="fa-solid fa-star"></i> Flagship Suite</div>
-              <div class="project-icon-box icon-mauve"><i class="fa-solid fa-couch"></i></div>
-            </div>
-            <div class="project-card-content">
-              <h3 class="project-title">CozyDesk</h3>
-              <p class="project-summary">
-                A sleek, modular desktop workspace organizer and productivity command center. Combines customizable widgets, ambient audio themes, task boards, and focus timers into a distraction-free, cozy hub.
-              </p>
+        <!-- Dynamic GitHub Repos Grid -->
+        <div class="github-repos-grid" id="githubReposGrid">
+          <!-- Loading Skeletons while fetching API -->
+          <div class="repo-skeleton-card">
+            <div class="skeleton-line title"></div>
+            <div class="skeleton-line desc"></div>
+            <div class="skeleton-line desc short"></div>
+            <div class="skeleton-footer"></div>
+          </div>
+          <div class="repo-skeleton-card">
+            <div class="skeleton-line title"></div>
+            <div class="skeleton-line desc"></div>
+            <div class="skeleton-line desc short"></div>
+            <div class="skeleton-footer"></div>
+          </div>
+          <div class="repo-skeleton-card">
+            <div class="skeleton-line title"></div>
+            <div class="skeleton-line desc"></div>
+            <div class="skeleton-line desc short"></div>
+            <div class="skeleton-footer"></div>
+          </div>
+          <div class="repo-skeleton-card">
+            <div class="skeleton-line title"></div>
+            <div class="skeleton-line desc"></div>
+            <div class="skeleton-line desc short"></div>
+            <div class="skeleton-footer"></div>
+          </div>
+        </div>
 
-              <div class="project-highlights-list">
-                <span><i class="fa-solid fa-check"></i> Modular desktop widgets</span>
-                <span><i class="fa-solid fa-check"></i> Ambient soundscapes & lofi themes</span>
-                <span><i class="fa-solid fa-check"></i> Focus Pomodoro timers & notes</span>
-              </div>
-
-              <div class="project-tech-tags">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Tailwind CSS</span>
-                <span class="tech-tag">Electron</span>
-              </div>
-
-              <div class="project-links">
-                <a href="https://github.com/Aditya060406/CozyDesk" target="_blank" rel="noopener noreferrer" class="project-btn primary">
-                  <i class="fa-brands fa-github"></i> Repository
-                </a>
-                <a href="https://github.com/Aditya060406/CozyDesk" target="_blank" rel="noopener noreferrer" class="project-btn secondary">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Details
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 2: AI Content Transformation Engine -->
-          <article class="project-card spotlight-card reveal">
-            <div class="project-card-banner">
-              <div class="project-badge badge-hackathon"><i class="fa-solid fa-award"></i> SIH Finalist</div>
-              <div class="project-icon-box icon-yellow"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-            </div>
-            <div class="project-card-content">
-              <h3 class="project-title">AI Content Transformation Engine</h3>
-              <p class="project-summary">
-                Multimodal AI and OCR knowledge platform built for Smart India Hackathon (SIH). Automatically converts lecture slides, handwritten notes, and scanned documents into structured summaries, mind-maps, and revision flashcards.
-              </p>
-
-              <div class="project-highlights-list">
-                <span><i class="fa-solid fa-check"></i> Multimodal vision & OCR ingestion</span>
-                <span><i class="fa-solid fa-check"></i> Automated knowledge graph & summary</span>
-                <span><i class="fa-solid fa-check"></i> Interactive revision flashcard generator</span>
-              </div>
-
-              <div class="project-tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Multimodal AI</span>
-                <span class="tech-tag">OCR</span>
-                <span class="tech-tag">FastAPI</span>
-                <span class="tech-tag">Docker</span>
-              </div>
-
-              <div class="project-links">
-                <a href="https://github.com/Aditya060406" target="_blank" rel="noopener noreferrer" class="project-btn secondary">
-                  <i class="fa-brands fa-github"></i> GitHub Profile
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3: Event Registration Portal -->
-          <article class="project-card spotlight-card reveal">
-            <div class="project-card-banner">
-              <div class="project-badge badge-perf"><i class="fa-solid fa-bolt"></i> High Concurrency</div>
-              <div class="project-icon-box icon-teal"><i class="fa-solid fa-ticket"></i></div>
-            </div>
-            <div class="project-card-content">
-              <h3 class="project-title">Event Registration Portal</h3>
-              <p class="project-summary">
-                Scalable event management and ticketing platform designed for high-concurrency campus events. Features instant QR code generation, real-time check-in validation, attendee analytics, and role-based permissions.
-              </p>
-
-              <div class="project-highlights-list">
-                <span><i class="fa-solid fa-check"></i> High-speed QR scanning check-in</span>
-                <span><i class="fa-solid fa-check"></i> Real-time attendee dashboard</span>
-                <span><i class="fa-solid fa-check"></i> ACID-compliant PostgreSQL transactions</span>
-              </div>
-
-              <div class="project-tech-tags">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">Express</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">Prisma</span>
-              </div>
-
-              <div class="project-links">
-                <a href="https://github.com/Aditya060406" target="_blank" rel="noopener noreferrer" class="project-btn secondary">
-                  <i class="fa-brands fa-github"></i> GitHub Profile
-                </a>
-              </div>
-            </div>
-          </article>
+        <div class="repos-footer-cta reveal">
+          <a href="https://github.com/Aditya060406?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <i class="fa-brands fa-github"></i> Explore All Repositories on GitHub &rarr;
+          </a>
         </div>
       </div>
     </section>
@@ -444,8 +373,8 @@
             <div class="category-header">
               <div class="cat-icon cat-peach"><i class="fa-solid fa-database"></i></div>
               <div>
-                <h3 class="cat-title">Databases & ORM</h3>
-                <span class="cat-desc">Data persistence & caching</span>
+                <h3 class="cat-title">Databases & DevOps</h3>
+                <span class="cat-desc">Data persistence & tooling</span>
               </div>
             </div>
             <div class="skills-chips">
@@ -462,15 +391,15 @@
 
     <div class="section-glow-separator"></div>
 
-    <!-- Cozy Corner Section -->
-    <section class="section cozy-corner-section" id="cozy-corner">
+    <!-- Zen Lounge Section -->
+    <section class="section cozy-corner-section" id="zen-lounge">
       <div class="section-container">
         <div class="cozy-corner-box spotlight-card reveal">
           <div class="cozy-header">
-            <span class="cozy-pill">☕ Aditya's Cozy Corner</span>
+            <span class="cozy-pill">☕ Aditya's Zen Lounge</span>
             <h2 class="cozy-title">Take a moment, unwind & vibe ✨</h2>
             <p class="cozy-desc">
-              Inspired by the serene atmosphere of CozyDesk. Relax while browsing my portfolio with ambient oceanic frequencies or a warm virtual cup of coffee.
+              Relax while browsing my portfolio with soothing oceanic ambient soundscapes or enjoy a warm virtual cup of coffee.
             </p>
           </div>
 
