@@ -74,6 +74,9 @@
     <section class="hero-section" id="hero">
       <div class="hero-container">
         <div class="hero-content reveal">
+          <div class="hero-avatar-badge">
+            <div class="hero-avatar-inner">&lt;AP/&gt;</div>
+          </div>
           <div class="status-badge">
             <span class="status-dot"></span>
             <span class="status-text">Available for SWE Roles · Active Builder & Problem Solver 🚀</span>
@@ -147,7 +150,12 @@
               <div class="terminal-title">
                 <i class="fa-solid fa-laptop-code"></i> aditya@workstation: ~/bio.ts
               </div>
-              <div class="terminal-badge">Interactive</div>
+              <div class="terminal-actions">
+                <button class="terminal-copy-btn" id="copyCodeBtn" title="Copy code snippet">
+                  <i class="fa-regular fa-copy"></i> <span>Copy</span>
+                </button>
+                <div class="terminal-badge">Interactive</div>
+              </div>
             </div>
 
             <!-- Terminal Interactive Tabs -->
@@ -181,6 +189,8 @@
         </div>
       </div>
     </section>
+
+    <div class="section-glow-separator"></div>
 
     <!-- About Section -->
     <section class="section about-section" id="about">
@@ -234,6 +244,8 @@
         </div>
       </div>
     </section>
+
+    <div class="section-glow-separator"></div>
 
     <!-- Featured Projects Section -->
     <section class="section projects-section" id="projects">
@@ -352,6 +364,8 @@
       </div>
     </section>
 
+    <div class="section-glow-separator"></div>
+
     <!-- Technical Arsenal Section with Interactive Filter Tabs -->
     <section class="section arsenal-section" id="arsenal">
       <div class="section-container">
@@ -446,6 +460,8 @@
       </div>
     </section>
 
+    <div class="section-glow-separator"></div>
+
     <!-- Cozy Corner Section -->
     <section class="section cozy-corner-section" id="cozy-corner">
       <div class="section-container">
@@ -461,7 +477,14 @@
           <div class="cozy-widgets-row">
             <!-- Virtual Coffee Counter -->
             <div class="cozy-widget-card" id="coffeeWidget">
-              <div class="cozy-widget-icon" id="coffeeIcon">☕</div>
+              <div class="coffee-icon-container">
+                <div class="steam-wrap">
+                  <span class="steam-line"></span>
+                  <span class="steam-line"></span>
+                  <span class="steam-line"></span>
+                </div>
+                <div class="cozy-widget-icon" id="coffeeIcon">☕</div>
+              </div>
               <div class="cozy-widget-info">
                 <span class="cozy-widget-label">Virtual Coffee</span>
                 <span class="cozy-widget-stat"><span id="coffeeCount">3</span> cups enjoyed today</span>
@@ -471,7 +494,15 @@
 
             <!-- Ambient Lofi Soundscape -->
             <div class="cozy-widget-card" id="lofiWidget">
-              <div class="cozy-widget-icon" id="lofiIcon">🎧</div>
+              <div class="lofi-icon-container">
+                <div class="cozy-widget-icon" id="lofiIcon">🎧</div>
+                <div class="lofi-equalizer" id="lofiEqualizer">
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                  <span class="eq-bar"></span>
+                </div>
+              </div>
               <div class="cozy-widget-info">
                 <span class="cozy-widget-label">Ocean Chill Drone</span>
                 <span class="cozy-widget-stat" id="lofiStatus">Sound is muted</span>
@@ -493,6 +524,8 @@
       </div>
     </section>
 
+    <div class="section-glow-separator"></div>
+
     <!-- Connect / Contact Section -->
     <section class="section contact-section" id="contact">
       <div class="section-container">
@@ -501,7 +534,7 @@
             <span class="section-tag">💌 Let's Connect</span>
             <h2 class="section-title">Let's Build Something Exceptional</h2>
             <p class="contact-subtitle">
-              Whether you have a software engineering role, an open-source collaboration idea, or simply want to talk C++, distributed systems, or CozyDesk — my inbox is always open!
+              Whether you have a software engineering role, an open-source collaboration idea, or simply want to talk C++, distributed systems, or modern software design — my inbox is always open!
             </p>
           </div>
 

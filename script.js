@@ -160,6 +160,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const copyCodeBtn = document.getElementById('copyCodeBtn');
+  if (copyCodeBtn && terminalCode) {
+    copyCodeBtn.addEventListener('click', () => {
+      const codeText = terminalCode.innerText || terminalCode.textContent;
+      navigator.clipboard.writeText(codeText).then(() => {
+        copyCodeBtn.innerHTML = '<i class="fa-solid fa-check"></i> <span>Copied!</span>';
+        setTimeout(() => {
+          copyCodeBtn.innerHTML = '<i class="fa-regular fa-copy"></i> <span>Copy</span>';
+        }, 2000);
+        showToast('Code snippet copied to clipboard! 📋✨');
+      });
+    });
+  }
+
   // 6. Interactive Technical Arsenal Category Filter Tabs
   const filterBtns = document.querySelectorAll('.filter-tab-btn');
   const arsenalCards = document.querySelectorAll('.arsenal-category-card');
@@ -250,6 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       masterGain.connect(audioCtx.destination);
       isPlayingLofi = true;
+      document.getElementById('lofiWidget')?.classList.add('lofi-playing');
       if (lofiStatus) lofiStatus.textContent = '🎵 Oceanic Chill Drone Playing';
       if (toggleLofiBtn) toggleLofiBtn.textContent = 'Pause Ambience ⏸️';
       showToast('🌊 Oceanic ambient drone active. Enjoy the calm vibe!');
@@ -268,6 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
       audioCtx = null;
     }
     isPlayingLofi = false;
+    document.getElementById('lofiWidget')?.classList.remove('lofi-playing');
     if (lofiStatus) lofiStatus.textContent = 'Sound is muted';
     if (toggleLofiBtn) toggleLofiBtn.textContent = 'Play Ambience 🎵';
   }
