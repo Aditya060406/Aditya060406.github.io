@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typewriterElement = document.getElementById('typewriter');
   const roles = [
     'scalable full-stack web applications. 🚀',
-    'the CozyDesk desktop productivity suite. 🛋️🌊',
-    'multimodal AI & OCR solutions (SIH). 🏆',
-    'high-performance algorithms in C/C++. ⚡',
-    'clean code fueled by coffee & oceanic vibes. ☕🩵'
+    'clean, maintainable system architectures. ⚡',
+    'high-performance algorithms in C/C++. 💻',
+    'reliable backend services & modern APIs. 🛠️',
+    'impactful software through continuous building. 🌊'
   ];
 
   let roleIndex = 0;
@@ -118,29 +118,26 @@ document.addEventListener('DOMContentLoaded', () => {
     engineer: `<span class="syn-keyword">const</span> <span class="syn-entity">Aditya</span>: <span class="syn-type">DeveloperProfile</span> = {
   <span class="syn-prop">name</span>: <span class="syn-string">"Aditya Panigrahi"</span>,
   <span class="syn-prop">handle</span>: <span class="syn-string">"Aditya060406"</span>,
-  <span class="syn-prop">role</span>: <span class="syn-string">"Full-Stack Developer & CS Undergrad"</span>,
-  <span class="syn-prop">palette</span>: [
-    <span class="syn-string">"#031716"</span>, <span class="syn-string">"#032F30"</span>,
-    <span class="syn-string">"#0A7075"</span>, <span class="syn-string">"#0C969C"</span>,
-    <span class="syn-string">"#6BA3BE"</span>, <span class="syn-string">"#274D60"</span>
+  <span class="syn-prop">role</span>: <span class="syn-string">"Software Engineer & CS Undergrad"</span>,
+  <span class="syn-prop">focus</span>: [
+    <span class="syn-string">"Scalable Full-Stack Web Systems"</span>,
+    <span class="syn-string">"Systems & Algorithmic Problem Solving in C++"</span>,
+    <span class="syn-string">"API & Database Architecture"</span>
   ],
-  <span class="syn-prop">currentVibe</span>: <span class="syn-string">"Crafting CozyDesk in Oceanic Teal 🌊✨"</span>,
   <span class="syn-prop">status</span>: <span class="syn-keyword">function</span>() {
-    <span class="syn-keyword">return</span> <span class="syn-string">"Ready to build high-impact software!"</span>;
+    <span class="syn-keyword">return</span> <span class="syn-string">"Constantly learning, building, and shipping! 🚀"</span>;
   }
 };`,
-    cozydesk: `<span class="syn-keyword">{</span>
-  <span class="syn-prop">"appName"</span>: <span class="syn-string">"CozyDesk"</span>,
-  <span class="syn-prop">"version"</span>: <span class="syn-string">"1.0.0-beta"</span>,
-  <span class="syn-prop">"philosophy"</span>: <span class="syn-string">"Serenity meets peak productivity 🛋️🌊"</span>,
-  <span class="syn-prop">"features"</span>: [
-    <span class="syn-string">"Modular Desktop Widgets"</span>,
-    <span class="syn-string">"Ambient Ocean & Lofi Audio Themes"</span>,
-    <span class="syn-string">"Pomodoro & Flow State Timers"</span>,
-    <span class="syn-string">"Oceanic Teal Aesthetic Palette"</span>
+    architecture: `<span class="syn-keyword">{</span>
+  <span class="syn-prop">"domain"</span>: <span class="syn-string">"Full-Stack & Systems Engineering"</span>,
+  <span class="syn-prop">"workflow"</span>: [
+    <span class="syn-string">"Modular Component Architecture"</span>,
+    <span class="syn-string">"RESTful API & Relational Schema Design"</span>,
+    <span class="syn-string">"Clean Code & Automated Testing"</span>,
+    <span class="syn-string">"Continuous Project Delivery"</span>
   ],
-  <span class="syn-prop">"openSource"</span>: <span class="syn-type">true</span>,
-  <span class="syn-prop">"repository"</span>: <span class="syn-string">"github.com/Aditya060406/CozyDesk"</span>
+  <span class="syn-prop">"activity"</span>: <span class="syn-string">"Regularly engineering & releasing new projects"</span>,
+  <span class="syn-prop">"github"</span>: <span class="syn-string">"github.com/Aditya060406"</span>
 <span class="syn-keyword">}</span>`,
     philosophy: `<span class="syn-keyword"># Engineering Philosophy</span>
 
