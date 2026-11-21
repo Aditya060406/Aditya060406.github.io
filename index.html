@@ -3,25 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aditya Panigrahi | Full-Stack Developer & CS Undergrad</title>
-  <meta name="description" content="Portfolio of Aditya Panigrahi (Aditya060406) - Full-Stack Developer, Computer Science Undergraduate, and creator of CozyDesk.">
+  <title>Aditya Panigrahi ✨ | Full-Stack Developer & CS Undergrad</title>
+  <meta name="description" content="Portfolio of Aditya Panigrahi (Aditya060406) - Full-Stack Developer, Computer Science Undergraduate, and creator of CozyDesk. Cute, modern, and high-performance.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
   <!-- Ambient background glow elements -->
   <div class="ambient-glow glow-1"></div>
   <div class="ambient-glow glow-2"></div>
   <div class="ambient-glow glow-3"></div>
 
+  <!-- Cute Floating Sparkle Elements -->
+  <div class="floating-stars" aria-hidden="true">
+    <span class="star s1">✦</span>
+    <span class="star s2">✧</span>
+    <span class="star s3">⋆</span>
+    <span class="star s4">🌸</span>
+    <span class="star s5">✦</span>
+    <span class="star s6">☕</span>
+  </div>
+
   <!-- Sticky Glassmorphism Navbar -->
   <header class="navbar-wrapper">
     <nav class="navbar" id="navbar">
       <a href="#hero" class="nav-brand">
-        <span class="brand-monogram">&lt;AP/&gt;</span>
+        <span class="brand-monogram">&lt;AP ✨/&gt;</span>
         <span class="brand-name">Aditya Panigrahi</span>
       </a>
 
@@ -29,19 +42,24 @@
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#arsenal" class="nav-link">Arsenal</a>
+        <a href="#cozy-corner" class="nav-link">Cozy Corner 🛋️</a>
         <a href="#contact" class="nav-link">Contact</a>
         <div class="nav-social-icons">
-          <a href="https://github.com/Aditya060406" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon-btn">
+          <a href="https://github.com/Aditya060406" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon-btn" title="GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href="https://leetcode.com/u/aditya-panigrahi/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode" class="social-icon-btn">
+          <a href="https://leetcode.com/u/aditya-panigrahi/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode" class="social-icon-btn" title="LeetCode">
             <i class="fa-solid fa-code"></i>
           </a>
         </div>
       </div>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn-nav-cta">Get in Touch</a>
+        <!-- Cute Sparkle Trigger -->
+        <button class="btn-sparkle" id="sparkleBtn" title="Sprinkle some magic sparkles!">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> <span>Sparkles</span>
+        </button>
+        <a href="#contact" class="btn-nav-cta">Say Hello 👋</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
           <span></span>
           <span></span>
@@ -58,23 +76,28 @@
         <div class="hero-content reveal">
           <div class="status-badge">
             <span class="status-dot"></span>
-            <span>Open to Opportunities & Collaborations</span>
+            <span class="status-text">Available for SWE Roles · Building CozyDesk 🛋️</span>
           </div>
+
           <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Aditya Panigrahi</span>
+            Hey there, I'm <br/>
+            <span class="gradient-text">Aditya Panigrahi</span>
+            <span class="wave-emoji">👋</span>
           </h1>
+
           <div class="typing-container">
-            <span class="typing-prefix">I am a </span>
+            <span class="typing-prefix">I build </span>
             <span class="typing-text" id="typewriter"></span>
             <span class="typing-cursor">|</span>
           </div>
+
           <p class="hero-description">
-            Computer Science undergraduate building robust full-stack applications, scalable systems, and elegant developer tools. Passionate about performant C/C++ problem solving and crafting user-first digital experiences.
+            Computer Science undergraduate crafting scalable full-stack architectures, high-performance systems, and delightful developer tools. Driven by curiosity, algorithmic thinking in C/C++, and sweet Catppuccin aesthetics.
           </p>
 
           <div class="hero-ctas">
             <a href="#projects" class="btn btn-primary">
-              <i class="fa-solid fa-layer-group"></i> View Projects
+              <i class="fa-solid fa-rocket"></i> Explore Projects
             </a>
             <a href="https://github.com/Aditya060406" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
               <i class="fa-brands fa-github"></i> GitHub
@@ -82,58 +105,79 @@
             <a href="https://leetcode.com/u/aditya-panigrahi/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
               <i class="fa-solid fa-code"></i> LeetCode
             </a>
+            <button class="btn btn-ghost" id="copyEmailHeroBtn" title="Copy Email">
+              <i class="fa-regular fa-copy"></i> <span id="copyEmailHeroText">Copy Email</span>
+            </button>
           </div>
 
           <div class="quick-highlights">
             <div class="highlight-item">
-              <span class="highlight-number">Full-Stack</span>
-              <span class="highlight-label">Architecture</span>
+              <div class="highlight-icon">💻</div>
+              <div>
+                <span class="highlight-number">Full-Stack</span>
+                <span class="highlight-label">Web & Systems</span>
+              </div>
             </div>
             <div class="highlight-item">
-              <span class="highlight-number">CozyDesk</span>
-              <span class="highlight-label">Creator</span>
+              <div class="highlight-icon">🛋️</div>
+              <div>
+                <span class="highlight-number">CozyDesk</span>
+                <span class="highlight-label">Flagship Suite</span>
+              </div>
             </div>
             <div class="highlight-item">
-              <span class="highlight-number">SIH</span>
-              <span class="highlight-label">Hackathon Finalist</span>
+              <div class="highlight-icon">🏆</div>
+              <div>
+                <span class="highlight-number">SIH Finalist</span>
+                <span class="highlight-label">Multimodal AI Engine</span>
+              </div>
             </div>
           </div>
         </div>
 
+        <!-- Interactive Terminal Visual -->
         <div class="hero-visual reveal">
-          <div class="code-terminal-card">
+          <div class="code-terminal-card" id="terminalCard">
             <div class="terminal-header">
               <div class="terminal-dots">
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
               </div>
-              <div class="terminal-title">aditya@workstation: ~/engineer.json</div>
-              <div class="terminal-action"><i class="fa-solid fa-terminal"></i></div>
+              <div class="terminal-title">
+                <i class="fa-solid fa-laptop-code"></i> aditya@workstation: ~/bio.ts
+              </div>
+              <div class="terminal-badge">Interactive</div>
             </div>
-            <div class="terminal-body">
-              <pre><code><span class="syn-keyword">const</span> <span class="syn-entity">developer</span> = {
+
+            <!-- Terminal Interactive Tabs -->
+            <div class="terminal-tabs">
+              <button class="term-tab active" data-tab="engineer">engineer.ts</button>
+              <button class="term-tab" data-tab="cozydesk">cozydesk.json</button>
+              <button class="term-tab" data-tab="philosophy">philosophy.md</button>
+            </div>
+
+            <div class="terminal-body" id="terminalBody">
+              <pre><code id="terminalCode"><span class="syn-keyword">const</span> <span class="syn-entity">Aditya</span>: <span class="syn-type">DeveloperProfile</span> = {
   <span class="syn-prop">name</span>: <span class="syn-string">"Aditya Panigrahi"</span>,
   <span class="syn-prop">handle</span>: <span class="syn-string">"Aditya060406"</span>,
-  <span class="syn-prop">status</span>: <span class="syn-string">"CS Undergrad & Builder"</span>,
-  <span class="syn-prop">stack</span>: [
-    <span class="syn-string">"TypeScript"</span>, <span class="syn-string">"React"</span>,
-    <span class="syn-string">"Node.js"</span>, <span class="syn-string">"Express"</span>,
-    <span class="syn-string">"C/C++"</span>, <span class="syn-string">"PostgreSQL"</span>
+  <span class="syn-prop">role</span>: <span class="syn-string">"Full-Stack Developer & CS Undergrad"</span>,
+  <span class="syn-prop">superpowers</span>: [
+    <span class="syn-string">"TypeScript & React"</span>,
+    <span class="syn-string">"Node.js & Microservices"</span>,
+    <span class="syn-string">"C/C++ Problem Solving"</span>,
+    <span class="syn-string">"PostgreSQL & Redis"</span>
   ],
-  <span class="syn-prop">notableProjects</span>: [
-    <span class="syn-string">"CozyDesk"</span>,
-    <span class="syn-string">"AI Content Transformation"</span>,
-    <span class="syn-string">"Event Registration Portal"</span>
-  ],
-  <span class="syn-prop">solveProblems</span>: () => {
-    <span class="syn-keyword">return</span> <span class="syn-string">"Turning ideas into scalable code."</span>;
+  <span class="syn-prop">currentVibe</span>: <span class="syn-string">"Crafting CozyDesk with coffee ☕💜"</span>,
+  <span class="syn-prop">status</span>: <span class="syn-keyword">function</span>() {
+    <span class="syn-keyword">return</span> <span class="syn-string">"Ready to build high-impact software!"</span>;
   }
 };</code></pre>
             </div>
+
             <div class="terminal-footer">
               <span class="terminal-status"><i class="fa-solid fa-circle-check"></i> System Nominal</span>
-              <span class="terminal-lang">TypeScript 5.x</span>
+              <span class="terminal-hint">Click tabs above to inspect ✨</span>
             </div>
           </div>
         </div>
@@ -144,48 +188,49 @@
     <section class="section about-section" id="about">
       <div class="section-container">
         <div class="section-header reveal">
-          <span class="section-tag">About Me</span>
-          <h2 class="section-title">Driven by Curiosity & Code</h2>
-          <p class="section-subtitle">Bridging system-level logic with modern web design.</p>
+          <span class="section-tag">🌸 Story & Philosophy</span>
+          <h2 class="section-title">Bridging Performance with Delight</h2>
+          <p class="section-subtitle">Writing scalable code that feels effortlessly fast and intuitive.</p>
         </div>
 
         <div class="about-grid">
-          <div class="about-text-card reveal">
-            <h3>Hello, World! 👋</h3>
+          <div class="about-text-card spotlight-card reveal">
+            <h3>Hello World! I'm Aditya. 👋</h3>
             <p>
-              I'm Aditya Panigrahi, a Computer Science undergraduate focused on building scalable, reliable, and delightful software solutions. My journey spans from low-level systems programming in C and C++ to modern, dynamic web platforms using React, Node.js, and TypeScript.
+              I am a Computer Science undergraduate focused on crafting scalable, reliable, and aesthetically delightful digital products. My journey spans the full engineering spectrum — from low-level systems programming and Data Structures in C and C++, to rich, reactive web architectures using React, Node.js, and TypeScript.
             </p>
             <p>
-              Whether it's building workspace productivity tools like <strong>CozyDesk</strong>, competing in national-level competitions like the <strong>Smart India Hackathon</strong>, or tackling algorithmic challenges on LeetCode, I thrive on solving complex engineering puzzles with clean, maintainable architecture.
+              I believe great software should not only be robust under the hood, but also bring genuine joy to the people using it. That philosophy drove me to build <strong>CozyDesk</strong> — an ambient productivity workspace organizer — and to build an AI Content Transformation Engine that reached the finals of the <strong>Smart India Hackathon</strong>.
             </p>
+
             <div class="about-pills">
-              <span class="pill"><i class="fa-solid fa-code-commit"></i> Clean Code</span>
-              <span class="pill"><i class="fa-solid fa-microchip"></i> Systems Thinking</span>
-              <span class="pill"><i class="fa-solid fa-bolt"></i> Performance First</span>
-              <span class="pill"><i class="fa-solid fa-users"></i> Collaborative Builder</span>
+              <span class="pill"><i class="fa-solid fa-sparkles"></i> Clean Architecture</span>
+              <span class="pill"><i class="fa-solid fa-microchip"></i> Systems & C++</span>
+              <span class="pill"><i class="fa-solid fa-bolt"></i> Low Latency</span>
+              <span class="pill"><i class="fa-solid fa-heart"></i> Cozy Aesthetics</span>
             </div>
           </div>
 
           <div class="about-metrics-grid reveal">
-            <div class="metric-card">
-              <div class="metric-icon"><i class="fa-solid fa-laptop-code"></i></div>
-              <div class="metric-value">Full-Stack</div>
-              <div class="metric-desc">Web Apps, APIs & Microservices</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-icon"><i class="fa-solid fa-trophy"></i></div>
-              <div class="metric-value">SIH Finalist</div>
-              <div class="metric-desc">Multimodal AI Knowledge Engine</div>
-            </div>
-            <div class="metric-card">
-              <div class="metric-icon"><i class="fa-solid fa-cubes"></i></div>
+            <div class="metric-card spotlight-card">
+              <div class="metric-icon icon-lavender"><i class="fa-solid fa-cubes"></i></div>
               <div class="metric-value">CozyDesk</div>
-              <div class="metric-desc">Flagship Modular Workspace App</div>
+              <div class="metric-desc">Flagship modular desktop productivity environment</div>
             </div>
-            <div class="metric-card">
-              <div class="metric-icon"><i class="fa-solid fa-brain"></i></div>
-              <div class="metric-value">C / C++</div>
-              <div class="metric-desc">DSA & Algorithmic Problem Solving</div>
+            <div class="metric-card spotlight-card">
+              <div class="metric-icon icon-peach"><i class="fa-solid fa-trophy"></i></div>
+              <div class="metric-value">SIH Finalist</div>
+              <div class="metric-desc">Multimodal AI knowledge platform finalist</div>
+            </div>
+            <div class="metric-card spotlight-card">
+              <div class="metric-icon icon-blue"><i class="fa-solid fa-brain"></i></div>
+              <div class="metric-value">C & C++</div>
+              <div class="metric-desc">Algorithmic mastery & LeetCode problem solving</div>
+            </div>
+            <div class="metric-card spotlight-card">
+              <div class="metric-icon icon-teal"><i class="fa-solid fa-layer-group"></i></div>
+              <div class="metric-value">Full-Stack</div>
+              <div class="metric-desc">TypeScript, React, Node.js, Express & PostgreSQL</div>
             </div>
           </div>
         </div>
@@ -196,48 +241,66 @@
     <section class="section projects-section" id="projects">
       <div class="section-container">
         <div class="section-header reveal">
-          <span class="section-tag">Featured Work</span>
-          <h2 class="section-title">Projects Crafted with Precision</h2>
-          <p class="section-subtitle">Real-world applications solving real challenges.</p>
+          <span class="section-tag">🚀 Featured Creations</span>
+          <h2 class="section-title">Projects Engineered with Passion</h2>
+          <p class="section-subtitle">Real-world applications solving real challenges with clean design.</p>
         </div>
 
         <div class="projects-grid">
           <!-- Project 1: CozyDesk -->
-          <article class="project-card reveal">
+          <article class="project-card spotlight-card reveal">
             <div class="project-card-banner">
-              <div class="project-badge"><i class="fa-solid fa-star"></i> Featured Project</div>
-              <div class="project-icon-box"><i class="fa-solid fa-desktop"></i></div>
+              <div class="project-badge badge-flagship"><i class="fa-solid fa-star"></i> Flagship Suite</div>
+              <div class="project-icon-box icon-mauve"><i class="fa-solid fa-couch"></i></div>
             </div>
             <div class="project-card-content">
               <h3 class="project-title">CozyDesk</h3>
               <p class="project-summary">
-                A sleek, modular desktop workspace organizer and productivity command center. Combines customizable widgets, ambient audio themes, task boards, and focus timers into a distraction-free hub.
+                A sleek, modular desktop workspace organizer and productivity command center. Combines customizable widgets, ambient audio themes, task boards, and focus timers into a distraction-free, cozy hub.
               </p>
+
+              <div class="project-highlights-list">
+                <span><i class="fa-solid fa-check"></i> Modular desktop widgets</span>
+                <span><i class="fa-solid fa-check"></i> Ambient soundscapes & lofi themes</span>
+                <span><i class="fa-solid fa-check"></i> Focus Pomodoro timers & notes</span>
+              </div>
+
               <div class="project-tech-tags">
                 <span class="tech-tag">React</span>
                 <span class="tech-tag">TypeScript</span>
                 <span class="tech-tag">Tailwind CSS</span>
                 <span class="tech-tag">Electron</span>
               </div>
+
               <div class="project-links">
                 <a href="https://github.com/Aditya060406/CozyDesk" target="_blank" rel="noopener noreferrer" class="project-btn primary">
                   <i class="fa-brands fa-github"></i> Repository
+                </a>
+                <a href="https://github.com/Aditya060406/CozyDesk" target="_blank" rel="noopener noreferrer" class="project-btn secondary">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Details
                 </a>
               </div>
             </div>
           </article>
 
           <!-- Project 2: AI Content Transformation Engine -->
-          <article class="project-card reveal">
+          <article class="project-card spotlight-card reveal">
             <div class="project-card-banner">
-              <div class="project-badge hackathon"><i class="fa-solid fa-award"></i> SIH Finalist</div>
-              <div class="project-icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <div class="project-badge badge-hackathon"><i class="fa-solid fa-award"></i> SIH Finalist</div>
+              <div class="project-icon-box icon-yellow"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
             </div>
             <div class="project-card-content">
               <h3 class="project-title">AI Content Transformation Engine</h3>
               <p class="project-summary">
                 Multimodal AI and OCR knowledge platform built for Smart India Hackathon (SIH). Automatically converts lecture slides, handwritten notes, and scanned documents into structured summaries, mind-maps, and revision flashcards.
               </p>
+
+              <div class="project-highlights-list">
+                <span><i class="fa-solid fa-check"></i> Multimodal vision & OCR ingestion</span>
+                <span><i class="fa-solid fa-check"></i> Automated knowledge graph & summary</span>
+                <span><i class="fa-solid fa-check"></i> Interactive revision flashcard generator</span>
+              </div>
+
               <div class="project-tech-tags">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Multimodal AI</span>
@@ -245,25 +308,33 @@
                 <span class="tech-tag">FastAPI</span>
                 <span class="tech-tag">Docker</span>
               </div>
+
               <div class="project-links">
                 <a href="https://github.com/Aditya060406" target="_blank" rel="noopener noreferrer" class="project-btn secondary">
-                  <i class="fa-brands fa-github"></i> View Profile
+                  <i class="fa-brands fa-github"></i> GitHub Profile
                 </a>
               </div>
             </div>
           </article>
 
           <!-- Project 3: Event Registration Portal -->
-          <article class="project-card reveal">
+          <article class="project-card spotlight-card reveal">
             <div class="project-card-banner">
-              <div class="project-badge"><i class="fa-solid fa-bolt"></i> High Throughput</div>
-              <div class="project-icon-box"><i class="fa-solid fa-ticket"></i></div>
+              <div class="project-badge badge-perf"><i class="fa-solid fa-bolt"></i> High Concurrency</div>
+              <div class="project-icon-box icon-teal"><i class="fa-solid fa-ticket"></i></div>
             </div>
             <div class="project-card-content">
               <h3 class="project-title">Event Registration Portal</h3>
               <p class="project-summary">
-                Scalable event management and ticketing platform designed for high concurrency campus events. Features instant QR code generation, real-time check-in validation, attendee analytics, and role-based permissions.
+                Scalable event management and ticketing platform designed for high-concurrency campus events. Features instant QR code generation, real-time check-in validation, attendee analytics, and role-based permissions.
               </p>
+
+              <div class="project-highlights-list">
+                <span><i class="fa-solid fa-check"></i> High-speed QR scanning check-in</span>
+                <span><i class="fa-solid fa-check"></i> Real-time attendee dashboard</span>
+                <span><i class="fa-solid fa-check"></i> ACID-compliant PostgreSQL transactions</span>
+              </div>
+
               <div class="project-tech-tags">
                 <span class="tech-tag">React</span>
                 <span class="tech-tag">Node.js</span>
@@ -271,9 +342,10 @@
                 <span class="tech-tag">PostgreSQL</span>
                 <span class="tech-tag">Prisma</span>
               </div>
+
               <div class="project-links">
                 <a href="https://github.com/Aditya060406" target="_blank" rel="noopener noreferrer" class="project-btn secondary">
-                  <i class="fa-brands fa-github"></i> View Profile
+                  <i class="fa-brands fa-github"></i> GitHub Profile
                 </a>
               </div>
             </div>
@@ -282,73 +354,141 @@
       </div>
     </section>
 
-    <!-- Technical Arsenal Section -->
+    <!-- Technical Arsenal Section with Interactive Filter Tabs -->
     <section class="section arsenal-section" id="arsenal">
       <div class="section-container">
         <div class="section-header reveal">
-          <span class="section-tag">Capabilities</span>
+          <span class="section-tag">⚡ Capabilities</span>
           <h2 class="section-title">Technical Arsenal</h2>
-          <p class="section-subtitle">Core technologies and tools powering my solutions.</p>
+          <p class="section-subtitle">Battle-tested tools and languages I use to construct solutions.</p>
+
+          <!-- Category Filter Tabs -->
+          <div class="arsenal-filter-tabs">
+            <button class="filter-tab-btn active" data-filter="all">All Skills</button>
+            <button class="filter-tab-btn" data-filter="languages">Languages</button>
+            <button class="filter-tab-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-tab-btn" data-filter="backend">Backend</button>
+            <button class="filter-tab-btn" data-filter="databases">Databases & Tools</button>
+          </div>
         </div>
 
-        <div class="arsenal-grid">
+        <div class="arsenal-grid" id="arsenalGrid">
           <!-- Languages -->
-          <div class="arsenal-category-card reveal">
+          <div class="arsenal-category-card spotlight-card reveal" data-category="languages">
             <div class="category-header">
               <div class="cat-icon cat-blue"><i class="fa-solid fa-code"></i></div>
-              <h3 class="cat-title">Programming Languages</h3>
+              <div>
+                <h3 class="cat-title">Languages</h3>
+                <span class="cat-desc">Core systems & scripting</span>
+              </div>
             </div>
-            <div class="skills-list">
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> C</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> C++</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> Python</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> TypeScript</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> JavaScript (ES6+)</div>
+            <div class="skills-chips">
+              <div class="skill-chip"><span class="chip-dot blue"></span> C</div>
+              <div class="skill-chip"><span class="chip-dot blue"></span> C++ (STL / Modern)</div>
+              <div class="skill-chip"><span class="chip-dot yellow"></span> Python</div>
+              <div class="skill-chip"><span class="chip-dot teal"></span> TypeScript</div>
+              <div class="skill-chip"><span class="chip-dot yellow"></span> JavaScript (ES6+)</div>
             </div>
           </div>
 
           <!-- Frontend -->
-          <div class="arsenal-category-card reveal">
+          <div class="arsenal-category-card spotlight-card reveal" data-category="frontend">
             <div class="category-header">
               <div class="cat-icon cat-teal"><i class="fa-brands fa-react"></i></div>
-              <h3 class="cat-title">Frontend Engineering</h3>
+              <div>
+                <h3 class="cat-title">Frontend Engineering</h3>
+                <span class="cat-desc">Interfaces & state</span>
+              </div>
             </div>
-            <div class="skills-list">
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> React.js</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> HTML5 / Modern DOM</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> CSS3 / Modern Flex & Grid</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> Tailwind CSS</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> Responsive & Accessible UI</div>
+            <div class="skills-chips">
+              <div class="skill-chip"><span class="chip-dot teal"></span> React.js</div>
+              <div class="skill-chip"><span class="chip-dot peach"></span> HTML5 & Semantics</div>
+              <div class="skill-chip"><span class="chip-dot blue"></span> CSS3 / Modern Flex & Grid</div>
+              <div class="skill-chip"><span class="chip-dot teal"></span> Tailwind CSS</div>
+              <div class="skill-chip"><span class="chip-dot mauve"></span> Responsive UI/UX</div>
             </div>
           </div>
 
-          <!-- Backend & Frameworks -->
-          <div class="arsenal-category-card reveal">
+          <!-- Backend -->
+          <div class="arsenal-category-card spotlight-card reveal" data-category="backend">
             <div class="category-header">
               <div class="cat-icon cat-mauve"><i class="fa-solid fa-server"></i></div>
-              <h3 class="cat-title">Backend & APIs</h3>
+              <div>
+                <h3 class="cat-title">Backend Architecture</h3>
+                <span class="cat-desc">APIs & Microservices</span>
+              </div>
             </div>
-            <div class="skills-list">
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> Node.js</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> Express.js</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> Django</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> Flask</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> RESTful Architecture</div>
+            <div class="skills-chips">
+              <div class="skill-chip"><span class="chip-dot green"></span> Node.js</div>
+              <div class="skill-chip"><span class="chip-dot mauve"></span> Express.js</div>
+              <div class="skill-chip"><span class="chip-dot green"></span> Django</div>
+              <div class="skill-chip"><span class="chip-dot blue"></span> Flask</div>
+              <div class="skill-chip"><span class="chip-dot teal"></span> RESTful APIs</div>
             </div>
           </div>
 
-          <!-- Databases & ORM -->
-          <div class="arsenal-category-card reveal">
+          <!-- Databases & Tools -->
+          <div class="arsenal-category-card spotlight-card reveal" data-category="databases">
             <div class="category-header">
               <div class="cat-icon cat-peach"><i class="fa-solid fa-database"></i></div>
-              <h3 class="cat-title">Databases & Storage</h3>
+              <div>
+                <h3 class="cat-title">Databases & ORM</h3>
+                <span class="cat-desc">Data persistence & caching</span>
+              </div>
             </div>
-            <div class="skills-list">
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> PostgreSQL</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> Redis (Caching / Queues)</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> SQLite</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> Prisma ORM</div>
-              <div class="skill-item"><i class="fa-solid fa-chevron-right"></i> Schema Design & Indexes</div>
+            <div class="skills-chips">
+              <div class="skill-chip"><span class="chip-dot blue"></span> PostgreSQL</div>
+              <div class="skill-chip"><span class="chip-dot red"></span> Redis (Caching / Queues)</div>
+              <div class="skill-chip"><span class="chip-dot sapphire"></span> SQLite</div>
+              <div class="skill-chip"><span class="chip-dot mauve"></span> Prisma ORM</div>
+              <div class="skill-chip"><span class="chip-dot lavender"></span> Docker & Git</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cute Interactive Feature: Cozy Corner -->
+    <section class="section cozy-corner-section" id="cozy-corner">
+      <div class="section-container">
+        <div class="cozy-corner-box spotlight-card reveal">
+          <div class="cozy-header">
+            <span class="cozy-pill">☕ Aditya's Cozy Corner</span>
+            <h2 class="cozy-title">Take a moment, unwind & vibe ✨</h2>
+            <p class="cozy-desc">
+              Inspired by the aesthetic of CozyDesk. Relax while browsing my portfolio with ambient lofi frequencies or a warm virtual cup of coffee.
+            </p>
+          </div>
+
+          <div class="cozy-widgets-row">
+            <!-- Virtual Coffee Counter -->
+            <div class="cozy-widget-card" id="coffeeWidget">
+              <div class="cozy-widget-icon" id="coffeeIcon">☕</div>
+              <div class="cozy-widget-info">
+                <span class="cozy-widget-label">Virtual Coffee</span>
+                <span class="cozy-widget-stat"><span id="coffeeCount">3</span> cups enjoyed today</span>
+              </div>
+              <button class="btn-cozy-action" id="sipCoffeeBtn">Take a sip ☕</button>
+            </div>
+
+            <!-- Ambient Lofi Soundscape -->
+            <div class="cozy-widget-card" id="lofiWidget">
+              <div class="cozy-widget-icon" id="lofiIcon">🎧</div>
+              <div class="cozy-widget-info">
+                <span class="cozy-widget-label">Ambient Chill Drone</span>
+                <span class="cozy-widget-stat" id="lofiStatus">Sound is muted</span>
+              </div>
+              <button class="btn-cozy-action" id="toggleLofiBtn">Play Ambience 🎵</button>
+            </div>
+
+            <!-- Magic Sparkles Shower -->
+            <div class="cozy-widget-card" id="sparkleWidget">
+              <div class="cozy-widget-icon">✨</div>
+              <div class="cozy-widget-info">
+                <span class="cozy-widget-label">Catppuccin Sparkles</span>
+                <span class="cozy-widget-stat">Sprinkle pastel magic</span>
+              </div>
+              <button class="btn-cozy-action" id="showerSparklesBtn">Sprinkle ✨</button>
             </div>
           </div>
         </div>
@@ -358,27 +498,29 @@
     <!-- Connect / Contact Section -->
     <section class="section contact-section" id="contact">
       <div class="section-container">
-        <div class="contact-card reveal">
+        <div class="contact-card spotlight-card reveal">
           <div class="contact-header">
-            <span class="section-tag">Get in Touch</span>
+            <span class="section-tag">💌 Let's Connect</span>
             <h2 class="section-title">Let's Build Something Exceptional</h2>
             <p class="contact-subtitle">
-              Have an opportunity, project collaboration, or just want to discuss software engineering? I'm always open to connecting!
+              Whether you have a software engineering role, an open-source collaboration idea, or simply want to talk C++, distributed systems, or CozyDesk — my inbox is always open!
             </p>
           </div>
 
           <div class="contact-channels">
-            <a href="mailto:adityakuchu@gmail.com" class="channel-card">
-              <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="channel-card copy-email-card" id="copyEmailCard">
+              <div class="channel-icon icon-email"><i class="fa-solid fa-envelope"></i></div>
               <div class="channel-info">
                 <span class="channel-label">Email Me</span>
                 <span class="channel-value">adityakuchu@gmail.com</span>
               </div>
-              <i class="fa-solid fa-arrow-up-right-from-square channel-arrow"></i>
-            </a>
+              <button class="btn-channel-action" id="copyEmailBtn" title="Copy to clipboard">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+            </div>
 
             <a href="https://github.com/Aditya060406" target="_blank" rel="noopener noreferrer" class="channel-card">
-              <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="channel-icon icon-github"><i class="fa-brands fa-github"></i></div>
               <div class="channel-info">
                 <span class="channel-label">GitHub</span>
                 <span class="channel-value">github.com/Aditya060406</span>
@@ -387,10 +529,10 @@
             </a>
 
             <a href="https://leetcode.com/u/aditya-panigrahi/" target="_blank" rel="noopener noreferrer" class="channel-card">
-              <div class="channel-icon"><i class="fa-solid fa-code"></i></div>
+              <div class="channel-icon icon-leetcode"><i class="fa-solid fa-code"></i></div>
               <div class="channel-info">
                 <span class="channel-label">LeetCode</span>
-                <span class="channel-value">leetcode.com/u/aditya-panigrahi</span>
+                <span class="channel-value">aditya-panigrahi</span>
               </div>
               <i class="fa-solid fa-arrow-up-right-from-square channel-arrow"></i>
             </a>
@@ -404,8 +546,8 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-left">
-        <a href="#hero" class="footer-brand">&lt;AP/&gt; Aditya Panigrahi</a>
-        <p class="footer-tagline">Crafted with precision & styled with the Catppuccin Mocha palette.</p>
+        <a href="#hero" class="footer-brand">&lt;AP ✨/&gt; Aditya Panigrahi</a>
+        <p class="footer-tagline">Crafted with precision, passion & the Catppuccin Mocha palette.</p>
       </div>
 
       <div class="footer-links">
@@ -421,9 +563,15 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Aditya Panigrahi. All rights reserved.</p>
+      <p>&copy; 2026 Aditya Panigrahi. Built with 💜 & Catppuccin Mocha. Have a cozy day! 🐾✨</p>
     </div>
   </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Copied to clipboard! ✨</span>
+  </div>
 
   <script src="script.js"></script>
 </body>
