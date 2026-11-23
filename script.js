@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function spawnSparkles(e) {
     const originX = e ? e.clientX : window.innerWidth / 2;
     const originY = e ? e.clientY : window.innerHeight / 2;
-    const sparkleEmojis = ['✨', '🌊', '✦', '✧', '🩵', '☕', '⋆'];
+    const sparkleEmojis = ['✨', '🪐', '🌙', '✦', '✧', '🩵', '🛰️', '⋆', '🚀', '🌊'];
 
     for (let i = 0; i < 18; i++) {
       const particle = document.createElement('span');
