@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Typewriter Effect
   const typewriterElement = document.getElementById('typewriter');
   const roles = [
-    'scalable full-stack web applications. 🚀',
-    'clean, maintainable system architectures. ⚡',
-    'high-performance algorithms in C/C++. 💻',
-    'reliable backend services & modern APIs. 🛠️',
-    'impactful software through continuous building. 🌊'
+    'scalable full-stack web applications.',
+    'clean, maintainable system architectures.',
+    'high-performance algorithms in C/C++.',
+    'reliable backend services & modern APIs.',
+    'impactful software through continuous building.'
   ];
 
   let roleIndex = 0;
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <span class="syn-string">"API & Database Architecture"</span>
   ],
   <span class="syn-prop">status</span>: <span class="syn-keyword">function</span>() {
-    <span class="syn-keyword">return</span> <span class="syn-string">"Constantly learning, building, and shipping! 🚀"</span>;
+    <span class="syn-keyword">return</span> <span class="syn-string">"Constantly learning, building, and shipping."</span>;
   }
 };`,
     architecture: `<span class="syn-keyword">{</span>
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <span class="syn-string">1. Code is written for humans first, computers second.</span>
 <span class="syn-string">2. Performance and beauty are not mutually exclusive.</span>
 <span class="syn-string">3. Master the fundamentals: Data Structures, Memory, I/O.</span>
-<span class="syn-string">4. Build tools that bring genuine calmness, clarity, and joy. 🌊</span>
+<span class="syn-string">4. Build software with genuine craftsmanship, clarity, and reliability.</span>
 
 <span class="syn-entity">// Always learning, always building.</span>`
   };
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           copyCodeBtn.innerHTML = '<i class="fa-regular fa-copy"></i> <span>Copy</span>';
         }, 2000);
-        showToast('Code snippet copied to clipboard! 📋✨');
+        showToast('Code snippet copied to clipboard');
       });
     });
   }
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
           coffeeIcon.style.transform = 'scale(1) rotate(0deg)';
         }, 300);
       }
-      showToast(`Mmm! Warm sip taken. ☕ Total: ${coffeeCount} cups today!`);
+      showToast(`Warm cup enjoyed. Total: ${coffeeCount} cups today.`);
     });
   }
 
@@ -268,9 +268,9 @@ document.addEventListener('DOMContentLoaded', () => {
       masterGain.connect(audioCtx.destination);
       isPlayingLofi = true;
       document.getElementById('lofiWidget')?.classList.add('lofi-playing');
-      if (lofiStatus) lofiStatus.textContent = '🎵 Oceanic Chill Drone Playing';
-      if (toggleLofiBtn) toggleLofiBtn.textContent = 'Pause Ambience ⏸️';
-      showToast('🌊 Oceanic ambient drone active. Enjoy the calm vibe!');
+      if (lofiStatus) lofiStatus.textContent = 'Oceanic Ambient Drone Playing';
+      if (toggleLofiBtn) toggleLofiBtn.innerHTML = '<i class="fa-solid fa-pause"></i> Pause Ambience';
+      showToast('Oceanic ambient audio active');
     } catch (e) {
       console.warn('AudioContext error:', e);
     }
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     isPlayingLofi = false;
     document.getElementById('lofiWidget')?.classList.remove('lofi-playing');
     if (lofiStatus) lofiStatus.textContent = 'Sound is muted';
-    if (toggleLofiBtn) toggleLofiBtn.textContent = 'Play Ambience 🎵';
+    if (toggleLofiBtn) toggleLofiBtn.innerHTML = '<i class="fa-solid fa-play"></i> Play Ambience';
   }
 
   // 9. Sparkle Shower Particle Generator
@@ -298,12 +298,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function spawnSparkles(e) {
     const originX = e ? e.clientX : window.innerWidth / 2;
     const originY = e ? e.clientY : window.innerHeight / 2;
-    const sparkleEmojis = ['✨', '🪐', '🌙', '✦', '✧', '🩵', '🛰️', '⋆', '🚀', '🌊'];
+    const sparkleGlyphs = ['✦', '✧', '•', '⋆', '·'];
 
     for (let i = 0; i < 18; i++) {
       const particle = document.createElement('span');
       particle.className = 'magic-sparkle-particle';
-      particle.textContent = sparkleEmojis[Math.floor(Math.random() * sparkleEmojis.length)];
+      particle.textContent = sparkleGlyphs[Math.floor(Math.random() * sparkleGlyphs.length)];
 
       const tx = (Math.random() - 0.5) * 350;
       const ty = (Math.random() - 0.5) * 350 - 50;
@@ -326,14 +326,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (sparkleBtn) {
     sparkleBtn.addEventListener('click', (e) => {
       spawnSparkles(e);
-      showToast('✨ Oceanic teal sparkles sprinkled!');
+      showToast('Ambient particles active');
     });
   }
 
   if (showerSparklesBtn) {
     showerSparklesBtn.addEventListener('click', (e) => {
       spawnSparkles(e);
-      showToast('🌊 Serene sparkles shower! Have a peaceful day!');
+      showToast('Ambient particles active');
     });
   }
 
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function copyEmail() {
     const email = 'adityakuchu@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
-      showToast('Copied adityakuchu@gmail.com to clipboard! 💌✨');
+      showToast('Copied adityakuchu@gmail.com to clipboard');
     }).catch(() => {
       showToast('Email: adityakuchu@gmail.com');
     });
